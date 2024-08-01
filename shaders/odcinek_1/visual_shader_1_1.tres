@@ -1,0 +1,32 @@
+[gd_resource type="VisualShader" load_steps=2 format=3 uid="uid://be78kej0jte1b"]
+
+[sub_resource type="VisualShaderNodeVec4Constant" id="VisualShaderNodeVec4Constant_03xce"]
+expanded_output_ports = [0]
+constant = Quaternion(0.3, 0.3, 1, 1)
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+
+
+
+void fragment() {
+// Vector4Constant:2
+	vec4 n_out2p0 = vec4(0.300000, 0.300000, 1.000000, 1.000000);
+	float n_out2p4 = n_out2p0.a;
+
+
+// Output:0
+	COLOR.rgb = vec3(n_out2p0.xyz);
+	COLOR.a = n_out2p4;
+
+
+}
+"
+graph_offset = Vector2(-72.1187, -24.6199)
+mode = 1
+flags/light_only = false
+nodes/fragment/2/node = SubResource("VisualShaderNodeVec4Constant_03xce")
+nodes/fragment/2/position = Vector2(-60, 100)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 2, 4, 0, 1)

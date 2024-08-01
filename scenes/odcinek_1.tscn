@@ -1,0 +1,86 @@
+[gd_scene load_steps=19 format=3 uid="uid://c5ge3pus2ipx0"]
+
+[ext_resource type="Texture2D" uid="uid://ds5ypjrtnv7or" path="res://sprites/planets/planet00.png" id="1_b4bkp"]
+[ext_resource type="Shader" path="res://shaders/odcinek_1/shader_1_1.gdshader" id="1_kckfd"]
+[ext_resource type="Texture2D" uid="uid://b33svn31s1e4q" path="res://sprites/planets/planet02.png" id="2_jsher"]
+[ext_resource type="Shader" uid="uid://be78kej0jte1b" path="res://shaders/odcinek_1/visual_shader_1_1.tres" id="3_5hoxn"]
+[ext_resource type="Shader" path="res://shaders/odcinek_1/shader_1_2.gdshader" id="5_j6uph"]
+[ext_resource type="Shader" uid="uid://b403tqu0ipls7" path="res://shaders/odcinek_1/visual_shader_1_2.tres" id="6_hb3o0"]
+[ext_resource type="Shader" path="res://shaders/odcinek_1/shader_1_3.gdshader" id="7_orphn"]
+[ext_resource type="Shader" uid="uid://dnvt6ogcphq7n" path="res://shaders/odcinek_1/visual_shader_1_3.tres" id="8_o6h1k"]
+[ext_resource type="Shader" path="res://shaders/odcinek_1/shader_1_4.gdshader" id="9_py55a"]
+[ext_resource type="Shader" uid="uid://6e17ucgeq8yb" path="res://shaders/odcinek_1/visual_shader_1_4.tres" id="10_10eh5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rngnv"]
+shader = ExtResource("1_kckfd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eis5m"]
+shader = ExtResource("3_5hoxn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6af61"]
+shader = ExtResource("5_j6uph")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_34g1x"]
+shader = ExtResource("6_hb3o0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xrxr3"]
+shader = ExtResource("7_orphn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y7mps"]
+shader = ExtResource("8_o6h1k")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uwbd1"]
+shader = ExtResource("9_py55a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_301l2"]
+shader = ExtResource("10_10eh5")
+
+[node name="Odcinek1" type="Node2D"]
+
+[node name="Planet1_Shader1_Code" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_rngnv")
+position = Vector2(155, 195)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_b4bkp")
+
+[node name="Planet2_Shader1_Graph" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_eis5m")
+position = Vector2(157, 454)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_jsher")
+
+[node name="Planet1_Shader2_Code" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_6af61")
+position = Vector2(401, 191)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_b4bkp")
+
+[node name="Planet2_Shader2_Graph" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_34g1x")
+position = Vector2(403, 450)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_jsher")
+
+[node name="Planet1_Shader3_Code" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_xrxr3")
+position = Vector2(649, 184)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_b4bkp")
+
+[node name="Planet2_Shader3_Graph" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_y7mps")
+position = Vector2(651, 443)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_jsher")
+
+[node name="Planet1_Shader4_Code" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_uwbd1")
+position = Vector2(939, 184)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_b4bkp")
+
+[node name="Planet2_Shader4_Graph" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_301l2")
+position = Vector2(941, 443)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_jsher")

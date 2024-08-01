@@ -1,0 +1,42 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://dnvt6ogcphq7n"]
+
+[sub_resource type="VisualShaderNodeVec3Constant" id="VisualShaderNodeVec3Constant_egwub"]
+constant = Vector3(0.2, 0.1, 0.5)
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_swbn8"]
+expanded_output_ports = [0]
+source = 2
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+
+
+
+void fragment() {
+// Vector3Constant:2
+	vec3 n_out2p0 = vec3(0.200000, 0.100000, 0.500000);
+
+
+	vec4 n_out3p0;
+// Texture2D:3
+	n_out3p0 = texture(TEXTURE, UV);
+	float n_out3p4 = n_out3p0.a;
+
+
+// Output:0
+	COLOR.rgb = n_out2p0;
+	COLOR.a = n_out3p4;
+
+
+}
+"
+graph_offset = Vector2(-358.787, -104.238)
+mode = 1
+flags/light_only = false
+nodes/fragment/2/node = SubResource("VisualShaderNodeVec3Constant_egwub")
+nodes/fragment/2/position = Vector2(20, 80)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_swbn8")
+nodes/fragment/3/position = Vector2(80, 200)
+nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0, 3, 4, 0, 1)
